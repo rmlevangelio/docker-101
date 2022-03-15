@@ -1,0 +1,18 @@
+version: '3'
+services:
+  my-app:
+    image: [resgistryName]/my-app:1.0
+    ports:
+      - 3000:3000 # maps to machine port
+    environment: 
+  [CONTAINER_NAME]:
+    image: [IMAGE NAME]
+    ports:
+      - 27017:27017
+    environment:
+      - ENV_VARIABLES HERE
+    volumes: 
+      - mongo-data:/data/db # map to container path
+volumes:
+  mongo-data:
+    driver: local
